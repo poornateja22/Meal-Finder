@@ -1,6 +1,6 @@
 * {
     margin: 0px;
-    font-family:'Times New Roman', Times, serif;
+    font-family:Arial, Helvetica, sans-serif;
     border: border-box;
 }
 .navbar {
@@ -14,6 +14,7 @@
 .home {
     margin-left: 50px;
     font-weight: bolder;
+    
 }
 #menu-btn {
     margin-right: 50px;
@@ -49,13 +50,55 @@
 }
 
 .banner {
-    background-image: url(./images/vegan.jpg);
+    background-image: url(./images/cooking-image.webp);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:cover;
     width: 100%;
-    height: 300px;
-    opacity: 0.5;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
-.banner-text {
-    /* border-top: 50px; */
+.ban-input {
+    width: 190px;
+    padding: 12px;
+    padding-left: 20px;
+    border-radius: 20px;
+    border: 0px;
+}
+.fa-magnifying-glass {
+    padding: 15px;
+    background-color: #e16120;
+    color: white;
+    border-radius: 30px;
+}
+.ban-input, .ban-text {
+    margin-bottom: 15px;
+}
+.ban-text {
+    color: white;
+}
+
+
+.categ {
+    margin-top: 50px;
+    margin-left: 50px;
+}
+.categ-head .underline {
+    padding-bottom: 3px;
+    border-bottom: 2px solid #e16120;  
+    display: inline-block;  
+    margin-bottom: 30px;        
+}
+.categ-items {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+.categ-items img {
+    width: 220px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    transition: transform 0.3s ease; /* Smooth transition for hover */
+    border-radius: 8px; /* Optional: Rounded corners */
 }
