@@ -95,10 +95,67 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 10px;
+    margin-bottom: 100px;
 }
 .categ-items img {
     width: 220px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
-    transition: transform 0.3s ease; /* Smooth transition for hover */
-    border-radius: 8px; /* Optional: Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease; 
+    border-radius: 8px; 
+}
+
+
+
+
+
+.categories-details {
+    margin-top: 80px;
+    border: 2px solid #e16120;
+    width: 80%;
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    padding: 20px;
+    /* Center the div horizontally */
+    margin-left: auto;
+    margin-right: auto;
+}
+.category-name {
+    color: #e16120;
+    margin-bottom: 20px;
+}
+.description {
+    color: black;
+}
+
+.items-list {
+    margin-top: 80px;
+}
+.categ-head {
+    margin-left: 80px;
+}
+.meal-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.meal {
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.meal img {
+    width: 100%;
+}
+.meal:hover {
+    transform: scale(1.05);
+}
+.meal-name {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
 }
