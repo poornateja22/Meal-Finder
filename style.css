@@ -16,6 +16,10 @@
     font-weight: bolder;
     
 }
+.logo {
+    text-decoration: none;
+    color: white;
+}
 #menu-btn {
     margin-right: 50px;
     font-size: 30px;
@@ -49,6 +53,8 @@
     cursor: pointer;
 }
 
+
+
 .banner {
     background-image: url(./images/cooking-image.webp);
     background-repeat: no-repeat;
@@ -81,11 +87,15 @@
 }
 
 
+
 .categ {
     margin-top: 50px;
     margin-left: 50px;
 }
-.categ-head .underline {
+.categ-head {
+    margin-left: 80px;
+}
+#underline {
     padding-bottom: 3px;
     border-bottom: 2px solid #e16120;  
     display: inline-block;  
@@ -102,6 +112,9 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     transition: transform 0.3s ease; 
     border-radius: 8px; 
+}
+.img:hover {
+    transform: scale(1.05);
 }
 
 
@@ -128,11 +141,10 @@
     color: black;
 }
 
+
+
 .items-list {
     margin-top: 80px;
-}
-.categ-head {
-    margin-left: 80px;
 }
 .meal-items {
     display: flex;
