@@ -10,7 +10,7 @@ document.getElementById('side-menu').style.width = '0';
 
 
 
-let imgElements = document.getElementsByClassName('img');
+let imgElements = document.getElementsByClassName('categ-img');
 let categoryLinks = document.querySelectorAll('.categ-items a');
 fetch('https://www.themealdb.com/api/json/v1/1/categories.php')
 .then(response => response.json())
@@ -62,7 +62,7 @@ let arr = [
 'https://www.themealdb.com/api/json/v1/1/filter.php?c=Lamb', 
 'https://www.themealdb.com/api/json/v1/1/filter.php?c=Miscellaneous', 
 'https://www.themealdb.com/api/json/v1/1/filter.php?c=Pasta', 
-'https://www.themealdb.com/api/json/v1/1/filter.php?c=Pork',
+'https://www.themealdb.com/api/json/v1/1/filter.php?c=Pork',   
 'https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood', 
 'https://www.themealdb.com/api/json/v1/1/filter.php?c=Side', 
 'https://www.themealdb.com/api/json/v1/1/filter.php?c=Starter', 
@@ -90,6 +90,9 @@ fetch(categoryUrl)
             const mealImg = document.createElement('img');
             mealImg.setAttribute('src', meal.strMealThumb);
             mealImg.setAttribute('alt', meal.strMeal);
+
+
+            
     
             const mealName = document.createElement('div');
             mealName.classList.add('meal-name');
