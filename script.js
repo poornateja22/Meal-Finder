@@ -90,7 +90,7 @@ fetch(categoryUrl)
             const mealImg = document.createElement('img');
             mealImg.setAttribute('src', meal.strMealThumb);
             mealImg.setAttribute('alt', meal.strMeal);
-            
+
             const mealName = document.createElement('div');
             mealName.classList.add('meal-name');
             mealName.textContent = meal.strMeal;
@@ -113,3 +113,50 @@ console.error('Category URL not found');
         
 
         
+
+//meal details
+    document.addEventListener("DOMContentLoaded", () => {
+        // Function to fetch meal data from the API
+        const mealId = '52807'; // Example meal ID
+        const apiURL = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`;
+
+        fetch(apiURL)
+            .then(response => response.json())
+            .then(data => {
+                const meal = data.meals[0];
+
+                // Get elements by their class names
+                const mealImage = document.querySelector('.meal-image');
+                const mealName = document.querySelector('.meal-name');
+                const mealCategory = document.querySelector('.meal-category');
+                const mealSource = document.querySelector('.meal-source');
+                const mealTags = document.querySelector('.meal-tags');
+                const mealIngredients = document.querySelector('.div-ingredients');
+                const mealMeasure = document.querySelector('.measure');
+                const mealInstructions = document.querySelector('.Instructions');
+
+                // Populate the HTML with the API data
+                mealImage.innerHTML = `<img src="${meal.strMealThumb}" alt="${meal.strMeal}" class="img-fluid">`;
+                mealName.textContent = meal.strMeal;
+                mealCategory.textContent = meal.strCategory;
+                mealSource.innerHTML = meal.strSource ? `<a href="${meal.strSource}" target="_blank">Recipe Source</a>` : 'No source available';
+                
+                // Tags (if available)
+                mealTags.textContent = meal.strTags ? meal.strTags.split(',').join(', ') : 'No tags available';
+
+                // Ingredients and Measures
+                for (let i = 1; i <= 20; i++) {
+                    if (meal[`strIngredient${i}`] && meal[`strMeasure${i}`]) {
+                        const ingredient = meal[`strIngredient${i}`];
+                        const measure = meal[`strMeasure${i}`];
+                        mealIngredients.innerHTML += `<p>${ingredient}</p>`;
+                        mealMeasure.innerHTML += `<p>${measure}</p>`;
+                    }
+                }
+
+                // Instructions
+                mealInstructions.innerHTML = `<p>${meal.strInstructions}</p>`;
+            })
+            .catch(error => console.error('Error fetching meal data:', error));
+    });
+
