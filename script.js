@@ -90,10 +90,7 @@ fetch(categoryUrl)
             const mealImg = document.createElement('img');
             mealImg.setAttribute('src', meal.strMealThumb);
             mealImg.setAttribute('alt', meal.strMeal);
-
-
             
-    
             const mealName = document.createElement('div');
             mealName.classList.add('meal-name');
             mealName.textContent = meal.strMeal;

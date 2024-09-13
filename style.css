@@ -182,14 +182,21 @@
     height: 50px;
     background-color: #e16120;
     display: flex;
+    justify-content: left;
+    align-items: center;
     margin-left: auto;
     margin-right: auto;
     color: white;
 }
-
+.fa-house {
+    margin-left: 50px;
+}
 
 
 .meal-head {
     margin-top: 50px;
     margin-left: 80px;
+}
+.meal-image {
+    background-image: url();
 }
