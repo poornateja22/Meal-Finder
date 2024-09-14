@@ -18,6 +18,13 @@ fetch('https://www.themealdb.com/api/json/v1/1/categories.php')
     let categories = data.categories;
     for (let i = 0; i < imgElements.length && i < categories.length; i++) {
         imgElements[i].setAttribute('src', categories[i].strCategoryThumb);
+        let label = document.createElement('div');
+        label.textContent = categories[i].strCategory.toUpperCase();  
+        label.style.textAlign = 'center';
+        label.style.fontWeight = 'bold';
+        label.style.marginTop = '10px';
+        label.style.color ='#FF6F00';
+        imgElements[i].parentElement.appendChild(label);
         categoryLinks[i].setAttribute('href', `category.html?category=${categories[i].strCategory}`);
     }
 })
