@@ -54,56 +54,55 @@
 
 
 
+
+    <!---------------------- meal bar ----------------------------------->
     <div class="bar">
         <div>
             <i class="fa-solid fa-house"></i>
             <i class="fa-solid fa-angles-right"></i>
+             <!-- Meal Name placeholder -->
+        <span class="meal-bar-name"></span>
         </div>
     </div>
 
 
-
-    <div>
+    <!-------------------- meals details ----------------------------------->
+    <div class="meal-container">
         <h4 class="meal-head"><span class="underline">MEAL</span> DETAILS</h4>
-        <div class="meal-details details">
+        <div class="meal-details">
             <div class="meal-image">
-
+                <!-- Meal image will be injected here -->
             </div>
-            <div>
-                <h4 class="meal-name"></h4>
-                <div class="div-category details">
-                    <p>CATEGORY: </p>
-                    <p class="meal-category"></p>
+            <div class="meal-description">
+                <h2 class="meal-name"></h2>
+                <div class="meal-info">
+                    <p><b>CATEGORY: </b><span class="meal-category"></span></p>
+                    <p><b>Source: </b><a class="meal-source" target="_blank"></a></p>
                 </div>
-                <div class="div-source details">
-                    <p>Source: </p>
-                    <p class="meal-source"></p>
+                <div class="meal-tags">
+                    <p><b>Tags: </b><span class="tags-list"></span></p>
                 </div>
-                <div class="div-tags details">
-                    <p>Tags: </p>
-                    <p class="meal-tags"></p>
-                    <p class="meal-tags"></p>
-                    <p class="meal-tags"></p>
-                </div>
-                <div class="div-ingredients">
-
+                <div class="ingredients-section">
+                    <h5>Ingredients:</h5>
+                    <div class="div-ingredients"></div>
                 </div>
             </div>
         </div>
-        <div class="measure">
-            <h5>Measure:</h5>
-
+        <div class="measure-section">
+            <h3>Measure:</h3>
+            <div class="measure"></div>
         </div>
-        <div class="Instructions">
-            <h5>Instructions: </h5>
-
+        <div class="instructions-section">
+            <h5>Instructions:</h5>
+            <div class="instructions"></div>
         </div>
     </div>
+    
 
 
 
     <div class="categories"></div>
-        <h4 class="categ-head"><span id="underline">CATE</span>GORIES</h4>
+        <h4 class="categ-head"><span class="underline">CATE</span>GORIES</h4>
         <div class="categ-items">
             <div>
                 <!-- <span class=".one">Beef</span> -->

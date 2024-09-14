@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+
+    <!---------------------------------- header section --------------------------------------->
     <header>
         <div class="navbar">
             <div class="nav-left">
@@ -42,23 +44,25 @@
     </header>
 
 
-
+    <!--------------------------- banner section -------------------------------->
     <div class="banner">
         <div>
-            <input type="text" placeholder="Search recipes here..." class="ban-input">
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search recipes here..." class="ban-input" id="meal-search">
+            <i class="fa-solid fa-magnifying-glass" onclick="searchMeal()"></i> <!-- Search Icon -->
             <h2 class="ban-text">What are your favorite cuisines?</h2>
             <p class="ban-text">PERSONALIZE YOUR EXPERIENCE</p>
         </div>
     </div>
 
+    <div id="search-results" class="search-results"></div>
 
 
+    <!------------------------------ categories section ------------------------------->
     <div class="categories">
-        <h4 class="categ-head"><span id="underline">CATE</span>GORIES</h4>
+        <h4 class="categ-head"><span class="underline">CATE</span>GORIES</h4>
         <div class="categ-items">
             <div>
-                <!-- <span class=".one">Beef</span> -->
+                <p class=".one">Beef</p>
                 <a href="category.html?category=Beef"><img class="categ-img" src="" alt="Beef"></a>
             </div>
             <div>
@@ -102,7 +106,6 @@
             </div>
         </div>
     </div>
-
 
     
     <script src="script.js"></script>
